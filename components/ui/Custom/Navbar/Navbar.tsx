@@ -12,9 +12,9 @@ export const Navbar = (props: {}) => {
 			className="flex justify-center"
 			initial={{ y: "-100vh" }}
 			animate={{ y: 0 }}
-			transition={{ duration: 1, type: "spring", damping: 15, stiffness: 100 }}
+			transition={{ duration: 1 }}
 		>
-			<div className="bg-white text-black mx-2 w-full md:w-2/3 mt-5 p-5 border-foreground border-2 font-heading">
+			<div className="bg-white text-black mx-2 w-full md:w-2/3 mt-5 p-5 border-foreground border-2 font-heading fixed">
 				{/* Mobile Layout */}
 				<div className="md:hidden flex items-center justify-between">
 					<div className="flex items-center gap-4">
