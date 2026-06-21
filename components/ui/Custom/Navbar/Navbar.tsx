@@ -14,7 +14,7 @@ export const Navbar = (props: {}) => {
 			animate={{ y: 0 }}
 			transition={{ duration: 1 }}
 		>
-			<div className="bg-white text-black mx-2 w-full md:w-2/3 mt-5 p-5 border-foreground border-2 font-heading fixed">
+			<div className="bg-white text-black mx-2 w-full md:w-2/3 mt-5 p-5 border-foreground border-2 font-heading fixed z-100">
 				{/* Mobile Layout */}
 				<div className="md:hidden flex items-center justify-between">
 					<div className="flex items-center gap-4">
