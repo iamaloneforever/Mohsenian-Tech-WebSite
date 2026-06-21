@@ -1,6 +1,5 @@
 "use client";
 
-import SvgComponent from "../../Background";
 import CardHero from "./CardHero";
 import { Info } from "./Info";
 import { motion, stagger, Variants } from "motion/react";
