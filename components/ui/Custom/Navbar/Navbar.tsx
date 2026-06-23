@@ -14,9 +14,9 @@ export const Navbar = (props: {}) => {
 			animate={{ y: 0 }}
 			transition={{ duration: 1 }}
 		>
-			<div className="bg-white text-black mx-2 w-full md:w-2/3 mt-5 p-5 border-foreground border-2 font-heading fixed z-100">
+			<div className="fixed z-10 mx-2 mt-5 w-full border-2 border-foreground bg-white p-5 font-heading text-black md:w-2/3">
 				{/* Mobile Layout */}
-				<div className="md:hidden flex items-center justify-between">
+				<div className="flex items-center justify-between md:hidden">
 					<div className="flex items-center gap-4">
 						<Image
 							src={"/logo.png"}
@@ -41,11 +41,11 @@ export const Navbar = (props: {}) => {
 						<h1 className="text-lg font-extrabold">Tech Name</h1>
 					</div>
 					<div className="font-text">
-						<ul className="flex h-full w-full gap-10 items-center justify-center text-lg">
+						<ul className="flex h-full w-full items-center justify-center gap-10 text-lg">
 							{navItems.map((item) => (
 								<motion.li
 									key={item}
-									className="relative cursor-pointer hover:text-primary transition-colors"
+									className="relative cursor-pointer transition-colors hover:text-primary"
 									whileHover="hover"
 									initial="initial"
 								>
