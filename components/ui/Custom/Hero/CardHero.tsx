@@ -19,13 +19,13 @@ const CardVARIANT: Variants = {
 
 export default function CardHero() {
 	return (
-		<div className="flex justify-center items-center min-h-screen p-4">
+		<div className="flex min-h-screen items-center justify-center p-4">
 			<motion.div variants={CardVARIANT} whileHover={"hover"}>
-				<Card className="max-w-md w-full">
+				<Card className="w-full max-w-md">
 					<Card.Header className="space-y-4">
 						<Card.Title>About Me</Card.Title>
 
-						<div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+						<div className="relative aspect-video w-full overflow-hidden rounded-lg bg-gray-100">
 							<Image
 								src="/CardPhoto.jpg"
 								alt="Company SEO's Profile picture"
@@ -34,34 +34,47 @@ export default function CardHero() {
 							/>
 						</div>
 
-						<div className="flex gap-4 items-start py-4 flex-col border-t-2">
+						<div className="flex flex-col items-start gap-4 border-t-2 py-4">
 							<div className="flex items-center gap-2">
-								<div className="relative w-10 h-10 flex-shrink-0">
+								<div className="relative h-10 w-10 flex-shrink-0">
 									<Image
 										src="/Avatar.jpg"
 										alt="Company SEO's Profile picture"
 										fill
-										className="rounded-full border-2 object-cover"
+										className="rounded-full border-2 border-primary object-cover shadow-sm"
 									/>
 								</div>
 								<h1>Company Name </h1>
 							</div>
 							<p>@TechCompany</p>
-							<p className="font-text text-sm text-gray-700 leading-relaxed">
+							<p className="font-text text-sm leading-relaxed text-gray-700">
 								I can not find what to write here.. so imagine I wrote some good
 								stuff.
 							</p>
-							<div className="flex justify-between w-full">
-								<Badge>
-									128 Work <BriefcaseBusiness className="mx-2" />{" "}
+							{/* Badge‌ها با Grid */}
+							<div className="grid grid-cols-2 gap-2 pt-2 md:grid-cols-3">
+								<Badge
+									variant="outline"
+									className="flex items-center justify-center gap-1.5"
+								>
+									<BriefcaseBusiness className="h-3.5 w-3.5" />
+									128 Work
 								</Badge>
-								<Badge>
-									28 Brands <Wrench className="mx-2" />{" "}
+								<Badge
+									variant="outline"
+									className="flex items-center justify-center gap-1.5"
+								>
+									<Wrench className="h-3.5 w-3.5" />
+									28 Brands
 								</Badge>
-								<Badge>
-									1000+ hours <Clock className="mx-2" />{" "}
+								<Badge
+									variant="outline"
+									className="flex items-center justify-center gap-1.5"
+								>
+									<Clock className="h-3.5 w-3.5" />
+									1000+ hours
 								</Badge>
-							</div>
+							</div>{" "}
 						</div>
 					</Card.Header>
 				</Card>

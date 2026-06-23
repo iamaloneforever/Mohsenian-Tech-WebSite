@@ -16,20 +16,20 @@ import { Phone, Send } from "lucide-react";
 
 export const Info = () => {
 	return (
-		<div className="flex flex-col gap-10 items-center justify-center h-full w-full">
-			<h1 className="text-3xl">
+		<div className="flex h-full w-full flex-col items-center justify-center gap-10">
+			<h1 className="text-2xl lg:text-3xl">
 				I Am{" "}
-				<span className="text-primary font-extrabold text-4xl border-b-2 border-primary">
+				<span className="border-b-2 border-primary text-3xl font-extrabold text-primary lg:text-4xl">
 					Tech Company Name
 				</span>
 			</h1>
 
-			<p className="text-gray-700 text-md font-text">Create Your Dreams</p>
+			<p className="text-md font-text text-gray-700">Create Your Dreams</p>
 
 			<div className="flex gap-10">
 				<Dialog>
 					<DialogTrigger asChild>
-						<Button className=" bg-blue-400">
+						<Button className="bg-blue-400">
 							Telegram <Send className="mx-2" />
 						</Button>
 					</DialogTrigger>
@@ -47,7 +47,7 @@ export const Info = () => {
 								Message ME{" "}
 							</Button>
 							<DialogClose asChild>
-								<Button type="button" className="w-full ">
+								<Button type="button" className="w-full">
 									Close
 								</Button>
 							</DialogClose>
@@ -68,7 +68,7 @@ export const Info = () => {
 								from 9 to 10
 							</DialogDescription>
 						</DialogHeader>
-						<DialogFooter className="sm:justify-start flex flex-col">
+						<DialogFooter className="flex flex-col sm:justify-start">
 							<Button type="button" className="w-full bg-green-400">
 								Call Me
 							</Button>
