@@ -2,6 +2,7 @@ import ScrollAnimatedSvg from "@/components/ui/Background";
 import Demo from "@/components/ui/Custom/Demos/Demo";
 import { Faq } from "@/components/ui/Custom/FAQ/Faq";
 import Features from "@/components/ui/Custom/Features/Features";
+import Footer from "@/components/ui/Custom/Footer/footer";
 import Hero from "@/components/ui/Custom/Hero/Hero";
 
 export default function Page() {
@@ -18,6 +19,7 @@ export default function Page() {
 
 				<Faq />
 			</div>
+			<Footer />
 		</div>
 	);
 }
