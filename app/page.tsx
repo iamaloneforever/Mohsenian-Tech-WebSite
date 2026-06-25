@@ -1,4 +1,6 @@
+import ScrollAnimatedSvg from "@/components/ui/Background";
 import Demo from "@/components/ui/Custom/Demos/Demo";
+import { Faq } from "@/components/ui/Custom/FAQ/Faq";
 import Features from "@/components/ui/Custom/Features/Features";
 import Hero from "@/components/ui/Custom/Hero/Hero";
 
@@ -7,7 +9,15 @@ export default function Page() {
 		<div className="mt-45">
 			<Hero />
 			<Features />
-			<Demo />
+			<div className="relative">
+				<Demo />
+
+				<div className="pointer-events-none absolute inset-0 -z-10">
+					<ScrollAnimatedSvg />
+				</div>
+
+				<Faq />
+			</div>
 		</div>
 	);
 }

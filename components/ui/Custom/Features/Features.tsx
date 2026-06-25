@@ -3,12 +3,12 @@ import { Background } from "@/components/ui/Custom/Features/Background";
 import { SwiperFeatures } from "./SwiperFeatures";
 
 export default function Features() {
-  return (
-    <div className="w-full  flex items-center h-screen">
-      <div className="h-[50vh] border-y-2 relative w-full">
-        <Background />
-        <SwiperFeatures />
-      </div>
-    </div>
-  );
+	return (
+		<div className="flex h-screen w-full items-end">
+			<div className="relative h-[50vh] w-full border-y-2">
+				<Background />
+				<SwiperFeatures />
+			</div>
+		</div>
+	);
 }
