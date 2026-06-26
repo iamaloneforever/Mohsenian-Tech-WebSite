@@ -45,6 +45,19 @@ export default function CardHero() {
 									/>
 								</div>
 								<h1>Company Name </h1>
+								<Badge variant={"solid"}>
+									Always Online{" "}
+									<motion.span
+										className="mx-2 h-2 w-2 rounded-full bg-green-400"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{
+											duration: 2,
+											repeat: Infinity,
+											repeatType: "reverse",
+										}}
+									></motion.span>
+								</Badge>
 							</div>
 							<p>@TechCompany</p>
 							<p className="font-text text-sm leading-relaxed text-gray-700">
