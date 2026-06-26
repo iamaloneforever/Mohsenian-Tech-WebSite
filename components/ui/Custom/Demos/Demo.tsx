@@ -3,7 +3,7 @@ import { Card } from "@/components/retroui/Card";
 import VideosSwiper from "./VideosSwiper";
 import { useState } from "react";
 import { Video } from "@/types/VideoType";
-import { Badge } from "@/components/retroui/Badge";
+import { motion } from "motion/react";
 
 const videos: Video[] = [
 	{
@@ -58,7 +58,12 @@ export default function Demo() {
 	const currentVideo = videos[currentIndex];
 
 	return (
-		<div className="flex min-h-screen items-center justify-center p-2">
+		<motion.div
+			initial={{ opacity: 0, x: 100 }}
+			whileInView={{ opacity: 1, x: 0 }}
+			transition={{ delay: 1, duration: 1 }}
+			className="flex h-screen items-center justify-center p-2"
+		>
 			<Card className="w-full lg:w-5/6">
 				<Card.Header className="text-2xl font-bold">My Demos</Card.Header>
 				<Card.Content>
@@ -92,6 +97,6 @@ export default function Demo() {
 					</div>
 				</Card.Content>
 			</Card>
-		</div>
+		</motion.div>
 	);
 }
