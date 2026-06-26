@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FeatureCardInterface } from "@/types/CardType";
 import { CardFeatures } from "./CardFeatures";
+import { motion } from "motion/react";
 
 export const SwiperFeatures = () => {
   const Cards: FeatureCardInterface[] = [
@@ -59,12 +60,18 @@ export const SwiperFeatures = () => {
       >
         {Cards.map((element, index) => (
           <SwiperSlide>
-            <CardFeatures
-              key={index}
-              title={element.title}
-              logo={element.logo}
-              id={index}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05 + index * 0.1, type: "spring" }}
+            >
+              <CardFeatures
+                key={index}
+                title={element.title}
+                logo={element.logo}
+                id={index}
+              />
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
