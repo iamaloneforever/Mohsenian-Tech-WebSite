@@ -4,7 +4,6 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
@@ -23,11 +22,10 @@ export default function MobileMenu() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+          <DrawerTitle className="text-2xl">Menu</DrawerTitle>
         </DrawerHeader>
         <MobileMenuContent />
-        <DrawerFooter>
+        <DrawerFooter className="border-t-2">
           <Button>See Demos</Button>
           <DrawerClose asChild>
             <Button variant="outline">Cancel</Button>

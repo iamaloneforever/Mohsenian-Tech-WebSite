@@ -1,13 +1,11 @@
-import { Button } from "@/components/retroui/Button";
-
 export const MobileMenuContent = (props: {}) => {
 	return (
-		<div className="ml-4">
-			<ul className="flex h-full w-full flex-col gap-3 text-lg">
-				<li className="cursor-pointer transition-colors hover:text-gray-600">
+		<div className="border-t-2">
+			<ul className="mt-8 ml-2 flex h-full w-full flex-col gap-3 text-xl">
+				<li className="cursor-pointer transition-colors hover:text-primary">
 					Home
 				</li>
-				<li className="cursor-pointer transition-colors hover:text-gray-600">
+				<li className="cursor-pointer transition-colors hover:text-primary">
 					Gallary
 				</li>
 			</ul>
