@@ -52,11 +52,12 @@ const CardVARIANT: Variants = {
 
 export default function Hero() {
 	return (
-		<motion.div
+		<motion.section
+			id="hero"
 			variants={HeroVARIANT}
 			initial="initial"
 			animate="animate"
-			className="h-screen grid grid-cols-1 lg:grid-cols-2"
+			className="grid h-screen grid-cols-1 lg:grid-cols-2"
 		>
 			{/* Info */}
 			<motion.div variants={InfoVARIANT}>
@@ -68,6 +69,6 @@ export default function Hero() {
 				{/* Card hover animation */}
 				<CardHero />
 			</motion.div>
-		</motion.div>
+		</motion.section>
 	);
 }

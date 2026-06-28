@@ -58,7 +58,8 @@ export default function Demo() {
 	const currentVideo = videos[currentIndex];
 
 	return (
-		<motion.div
+		<motion.section
+			id="demos"
 			initial={{ opacity: 0, x: 100 }}
 			whileInView={{ opacity: 1, x: 0 }}
 			transition={{ delay: 1, duration: 1 }}
@@ -98,6 +99,6 @@ export default function Demo() {
 					</div>
 				</Card.Content>
 			</Card>
-		</motion.div>
+		</motion.section>
 	);
 }

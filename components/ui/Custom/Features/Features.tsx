@@ -4,11 +4,11 @@ import { SwiperFeatures } from "./SwiperFeatures";
 
 export default function Features() {
 	return (
-		<div className="flex h-screen w-full items-end">
+		<section id="features" className="flex h-screen w-full items-end">
 			<div className="relative h-[50vh] w-full border-y-2">
 				<Background />
 				<SwiperFeatures />
 			</div>
-		</div>
+		</section>
 	);
 }

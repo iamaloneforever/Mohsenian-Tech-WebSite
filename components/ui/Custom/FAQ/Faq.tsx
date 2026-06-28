@@ -255,7 +255,7 @@ function FAQItem({
 
 			<button
 				onClick={onClick}
-				className="relative z-10 flex w-full items-center justify-between p-6 text-left"
+				className="relative z-1 flex w-full items-center justify-between p-6 text-left"
 			>
 				<div className="flex items-center gap-3">
 					<motion.div
@@ -318,7 +318,7 @@ export const Faq = () => {
 	const [openIndex, setOpenIndex] = useState<number | null>(0);
 
 	return (
-		<section className="relative min-h-screen overflow-hidden py-32">
+		<section className="relative min-h-screen overflow-hidden py-32" id="faq">
 			{/* Background decorations */}
 			<motion.div
 				className="absolute inset-0 -z-10"

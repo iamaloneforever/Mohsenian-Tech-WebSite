@@ -4,6 +4,12 @@ import { Heart } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+	const navItems = [
+		{ title: "Hero", id: "hero" },
+		{ title: "Features", id: "features" },
+		{ title: "Demo", id: "demo" },
+		{ title: "FAQ", id: "faq" },
+	];
 	return (
 		<footer className="border-t border-white/10 bg-[#001220]">
 			<div className="mx-auto max-w-7xl px-6 py-20">
@@ -25,18 +31,20 @@ export default function Footer() {
 						<h3 className="mb-5 font-semibold text-white">Navigation</h3>
 
 						<div className="flex flex-col gap-3 text-neutral-400">
-							<Link href="#home" className="transition hover:text-primary">
-								Home
-							</Link>
-							<Link href="#features" className="transition hover:text-primary">
-								Features
-							</Link>
-							<Link href="#demo" className="transition hover:text-primary">
-								Demo
-							</Link>
-							<Link href="#faq" className="transition hover:text-primary">
-								FAQ
-							</Link>
+							{navItems.map((item) => (
+								<button
+									key={item.id}
+									onClick={() =>
+										document.getElementById(item.id)?.scrollIntoView({
+											behavior: "smooth",
+											block: "start",
+										})
+									}
+									className="cursor-pointer text-left transition hover:text-primary"
+								>
+									{item.title}
+								</button>
+							))}
 						</div>
 					</div>
 
