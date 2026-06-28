@@ -14,13 +14,9 @@ import {
 	DialogClose,
 } from "@/components/ui/dialog";
 import { Phone } from "lucide-react";
+import { navigationList } from "@/data/navigationList";
 
 export const Navbar = (props: {}) => {
-	const navItems = [
-		{ title: "Demos", id: "demos" },
-		{ title: "FAQ", id: "faq" },
-		{ title: "Features", id: "features" },
-	];
 	const scrollToSection = (id: string) => {
 		document.getElementById(id)?.scrollIntoView({
 			behavior: "smooth",
@@ -62,7 +58,7 @@ export const Navbar = (props: {}) => {
 					</div>
 					<div className="font-text">
 						<ul className="flex h-full w-full items-center justify-center gap-10 text-lg">
-							{navItems.map((item) => (
+							{navigationList.slice(1, 4).map((item) => (
 								<motion.li
 									key={item.id}
 									onClick={() => scrollToSection(item.id)}
@@ -85,7 +81,7 @@ export const Navbar = (props: {}) => {
 									/>
 								</motion.li>
 							))}
-						</ul>
+						</ul>{" "}
 					</div>
 					<div className="flex justify-end">
 						<Dialog>

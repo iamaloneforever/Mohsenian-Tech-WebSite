@@ -1,10 +1,6 @@
 "use client";
 
-const navItems = [
-	{ title: "Demos", id: "demos" },
-	{ title: "FAQ", id: "faq" },
-	{ title: "Features", id: "features" },
-];
+import { navigationList } from "@/data/navigationList";
 
 export const MobileMenuContent = () => {
 	const scrollToSection = (id: string) => {
@@ -17,7 +13,7 @@ export const MobileMenuContent = () => {
 	return (
 		<div className="border-t-2">
 			<ul className="mt-8 ml-2 flex h-full w-full flex-col gap-3 text-xl">
-				{navItems.map((item) => (
+				{navigationList.map((item) => (
 					<li
 						key={item.id}
 						onClick={() => scrollToSection(item.id)}

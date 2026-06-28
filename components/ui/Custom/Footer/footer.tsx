@@ -1,15 +1,10 @@
 "use client";
 
+import { navigationList } from "@/data/navigationList";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
-	const navItems = [
-		{ title: "Hero", id: "hero" },
-		{ title: "Features", id: "features" },
-		{ title: "Demo", id: "demo" },
-		{ title: "FAQ", id: "faq" },
-	];
 	return (
 		<footer className="border-t border-white/10 bg-[#001220]">
 			<div className="mx-auto max-w-7xl px-6 py-20">
@@ -31,7 +26,7 @@ export default function Footer() {
 						<h3 className="mb-5 font-semibold text-white">Navigation</h3>
 
 						<div className="flex flex-col gap-3 text-neutral-400">
-							{navItems.map((item) => (
+							{navigationList.map((item) => (
 								<button
 									key={item.id}
 									onClick={() =>
