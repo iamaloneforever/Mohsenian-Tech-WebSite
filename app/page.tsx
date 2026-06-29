@@ -7,13 +7,13 @@ import Hero from "@/components/ui/Custom/Hero/Hero";
 
 export default function Page() {
 	return (
-		<div className="mt-45">
+		<div className="mt-45 overflow-x-hidden">
 			<Hero />
 			<Features />
-			<div className="relative">
-				<Demo />
+			<Demo />
 
-				<div className="pointer-events-none absolute inset-0 -z-10">
+			<div className="relative">
+				<div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
 					<ScrollAnimatedSvg />
 				</div>
 

@@ -8,7 +8,7 @@ export default function ScrollAnimatedSvg() {
 
 	const { scrollYProgress } = useScroll({
 		target: containerRef,
-		offset: ["start end", "end start"],
+		offset: ["start end", "end end"], // ✅ تمام شدن در نیمهٔ صفحه
 	});
 
 	const progress = useSpring(scrollYProgress, {
@@ -17,44 +17,26 @@ export default function ScrollAnimatedSvg() {
 	});
 
 	const pathLength = useTransform(progress, [0, 1], [0, 1]);
-	const opacity = useTransform(progress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
-	const scale = useTransform(progress, [0, 0.5, 1], [0.9, 1, 1.1]);
+	const scrollScale = useTransform(progress, [0, 0.5, 1], [0.9, 1, 1.1]);
 
 	return (
 		<section ref={containerRef} className="relative h-full">
 			<div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
 				<motion.div
-					style={{ scale, opacity }}
-					className="w-full max-w-5xl px-8"
+					style={{ scale: scrollScale }}
+					className="flex h-full w-full items-center justify-center"
 				>
 					<motion.svg
-						viewBox="0 0 1369 3776"
-						className="h-auto w-full"
+						viewBox="0 0 193 622"
+						width="300"
+						height="auto"
+						className="overflow-visible"
 						fill="none"
 					>
-						<defs>
-							<filter id="glow">
-								<feGaussianBlur stdDeviation="10" result="blur" />
-								<feMerge>
-									<feMergeNode in="blur" />
-									<feMergeNode in="SourceGraphic" />
-								</feMerge>
-							</filter>
-						</defs>
-
-						<path
-							d="M120.005 40C120.005 40 592.005 40.0002 912.005 840C1232.01 1640 424.005 2296 120.005 1880C-183.995 1464 1552.01 1880 1304.01 2488C1056.01 3096 40.0052 3736 40.0052 3736"
-							stroke="#3a3125"
-							strokeWidth="80"
-							strokeLinecap="round"
-							opacity="0.2"
-						/>
-
-						{/* مسیر اصلی */}
 						<motion.path
-							d="M120.005 40C120.005 40 592.005 40.0002 912.005 840C1232.01 1640 424.005 2296 120.005 1880C-183.995 1464 1552.01 1880 1304.01 2488C1056.01 3096 40.0052 3736 40.0052 3736"
+							d="M39.144 6C39.144 6 199.47 224.75 175.57 306.174C151.671 387.597 32.1733 478.743 16.2403 539.507C0.307252 600.271 142.708 602.701 163.621 562.597C184.533 522.493 109.847 386.382 75.989 410.688C42.1314 434.993 105.863 706 105.863 706"
 							stroke="#CE9137"
-							strokeWidth="80"
+							strokeWidth="30"
 							strokeLinecap="round"
 							filter="url(#glow)"
 							style={{ pathLength }}

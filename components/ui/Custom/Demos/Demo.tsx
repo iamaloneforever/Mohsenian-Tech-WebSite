@@ -64,7 +64,7 @@ export default function Demo() {
 			whileInView={{ opacity: 1, x: 0 }}
 			transition={{ delay: 1, duration: 1 }}
 			viewport={{ once: true }}
-			className="flex h-screen items-center justify-center p-2"
+			className="flex h-screen items-end justify-center p-2"
 		>
 			<Card className="w-full lg:w-5/6">
 				<Card.Header className="text-2xl font-bold">My Demos</Card.Header>
